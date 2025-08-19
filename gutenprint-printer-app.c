@@ -13,7 +13,7 @@
 //
 
 #include <pappl-retrofit.h>
-
+#include <android/fdsan.h>
 
 //
 // Constants...
@@ -101,7 +101,7 @@ main(int  argc,				// I - Number of command-line arguments
                *stream_formats,
                *driver_selection_regex_list;
   const char   *driver_display_regex;
-
+  android_fdsan_set_error_level(ANDROID_FDSAN_ERROR_LEVEL_WARN_ONCE);
   // Array of spooling conversions, most desirables first
   //
   // Here we prefer not converting into another format
