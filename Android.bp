@@ -1,0 +1,18 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+
+cc_binary {
+    name: "gutenprint-printer-app",
+    srcs: [
+        "gutenprint-printer-app.c",
+    ],
+    shared_libs: [ "pappl-retrofit", "pappl", "libcups", "libcupsfilters", "libppd" ],
+    required: [ "usb", "gutenprint-printer-app.sh" ],
+}
+
+sh_binary {
+    name: "gutenprint-printer-app.sh",
+    src: "gutenprint-printer-app.sh",
+}
