@@ -16,6 +16,6 @@ export CUPS_SERVERROOT=/data/cups/serverroot
 export TMPDIR=/data/local/tmp
 export TESTPAGE_DIR=/system/etc
 
-mkdir -p $STATE_DIR $CUPS_STATEDIR
+mkdir -p $STATE_DIR $CUPS_STATEDIR 2>&1 /dev/null
 
 gutenprint-printer-app $@
