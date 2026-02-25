@@ -9,7 +9,7 @@ cc_binary {
         "gutenprint-printer-app.c",
     ],
     shared_libs: [ "pappl-retrofit", "pappl", "libcups", "libcupsfilters", "libppd" ],
-    required: [ "usb", "gutenprint-printer-app.sh", "gs", "escputil", "cups-calibrate", "gutenprint.5.3", "MasterPrint" ],
+    required: [ "usb", "gutenprint-printer-app.sh", "gs", "escputil", "cups-calibrate", "gutenprint.5.3", "MasterPrint", "cancel", "cupsaccept", "cupsctl", "cupstestppd", "lp", "lpadmin", "lpinfo", "lpmove", "lpoptions", "lpstat" ],
 }
 
 sh_binary {
