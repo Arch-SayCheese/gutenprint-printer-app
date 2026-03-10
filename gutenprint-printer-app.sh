@@ -7,15 +7,19 @@ export CUPS_DEBUG_LOG=-
 export CUPS_DEBUG_LEVEL=1
 #export STP_DEBUG=0xff7ff7ff
 export LD_LIBRARY_PATH=/system/lib64/printers
-export BACKEND_DIR=/system/bin/backends
+export BACKEND_DIR=/system/bin/backend
 export HOME=/data
-export SPOOL_DIR=/data/spool/
+export SPOOL_DIR=/data/cups/spool/
 export CUPS_STATEDIR=/data/cups/run
 export CUPS_DATADIR=/system/etc/cups
 export CUPS_SERVERROOT=/data/cups/serverroot
+export CUPS_CACHEDIR=/data/cups/run/cache
+export CUPS_REQUESTS=/data/cups/spool
+export CUPS_LOGDIR=/data/cups/log
+
 export TMPDIR=/data/local/tmp
 export TESTPAGE_DIR=/system/etc
 
-mkdir -p $STATE_DIR $CUPS_STATEDIR > /dev/null 2>&1
+mkdir -p $STATE_DIR $CUPS_STATEDIR $CUPS_CACHEDIR $CUPS_REQUESTS $CUPS_LOGDIR > /dev/null 2>&1
 
 gutenprint-printer-app $@
